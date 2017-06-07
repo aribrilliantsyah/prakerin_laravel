@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('testmodel', function () {
-    $a=App\Post::all();
-    return $a;
+    $a=App\produk::all();
+    $c=App\pengguna::all();
+    $b=App\Pengaturan::all();
+    return $a .'</br></br>'. $c.'</br></br>'. $b;
 });
 
 Route::get('produk', function () {
