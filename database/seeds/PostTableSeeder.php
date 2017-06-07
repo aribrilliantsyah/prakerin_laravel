@@ -12,5 +12,11 @@ class PostTableSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('post')->delete();
+        $a=[
+             ['title'=>'contoh','content'=>'apa aja']
+           ];
+        DB::table('post')->insert($a);
+
     }
 }
