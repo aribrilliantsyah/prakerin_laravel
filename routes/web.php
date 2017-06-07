@@ -19,3 +19,18 @@ Route::get('testmodel', function () {
     $a=App\Post::all();
     return $a;
 });
+
+Route::get('produk', function () {
+    $a=App\produk::all();
+    return $a;
+});
+
+Route::get('pengguna', function () {
+    $a=App\pengguna::all();
+    return $a;
+});
+
+Route::get('pengaturan', function () {
+    $b=App\Pengaturan::all();
+    return $b;
+});
