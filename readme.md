@@ -54,4 +54,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Alhamdullilah Saya bisa belajar laravel.
 Dengan Laravel saya mulai bisa memahami aplikasi berbasis web.
-framework laravel emeang terbaik.........!!!
+framework laravel emang terbaik.........!!!
