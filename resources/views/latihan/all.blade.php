@@ -5,6 +5,7 @@
 </head>
 <body>
 <h3>Buah</h3>
+
  <table border="1">
    <tr>
    @foreach($buah as $data)
@@ -12,6 +13,7 @@
    @endforeach
   </tr>
   </table>
+
 <h3>Komputer</h3>
   <table border="1">
    <tr>
@@ -20,6 +22,7 @@
    @endforeach
   </tr>
   </table>
+
 <h3>Binatang</h3>
   <table border="1">
    <tr>

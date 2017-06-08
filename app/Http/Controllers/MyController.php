@@ -51,4 +51,16 @@ class MyController extends Controller
         $buah = ['Mangga','Jeruk','Apel','Anggur','Melon','Manggis'];
         return view('latihan.all',compact('binatang','buah','komputer'));
     }
+
+    public function param($id)
+    {
+        @if($id=='binatang')
+        $binatang = ['Sapi','Monyet','Ikan Tuna','Belalang','Burung Kakatua'];
+        @endif
+        $komputer = ['Asus','Dell','Toshiba','Samsung','Acer','Axioo','Hp'];
+        $buah = ['Mangga','Jeruk','Apel','Anggur','Melon','Manggis'];
+        return view('latihan.all',compact('binatang','buah','komputer'));
+         return view('latihan.all', ['all' => all::findOrFail($id)]);
+
+    }
 }
