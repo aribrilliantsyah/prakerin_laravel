@@ -56,6 +56,7 @@ class MyController extends Controller
     {
         @if($id=='binatang')
         $binatang = ['Sapi','Monyet','Ikan Tuna','Belalang','Burung Kakatua'];
+        @else
         @endif
         $komputer = ['Asus','Dell','Toshiba','Samsung','Acer','Axioo','Hp'];
         $buah = ['Mangga','Jeruk','Apel','Anggur','Melon','Manggis'];
