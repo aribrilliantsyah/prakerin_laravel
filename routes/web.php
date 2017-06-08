@@ -36,3 +36,11 @@ Route::get('pengaturan', function () {
     $b=App\Pengaturan::all();
     return $b;
 });
+
+Route::get('/test','MyController@percobaan');
+
+Route::get('/test2','MyController@percobaan2');
+
+Route::get('/test3','MyController@percobaan3');
+
+Route::get('/test4','MyController@percobaan4');
