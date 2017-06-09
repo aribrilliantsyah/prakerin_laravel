@@ -69,7 +69,6 @@ class MyController extends Controller
 
     public function param($pilih,$jenis)
     {
-        
         $campur = ['binatang'=>['kucing'=>['Persia','Garong','Anggora'],
                                 'burung'=>['piit','japati','puyuh'],
                                 'ikan'=>['Sepat','Tuna','Hiu']],
@@ -77,9 +76,10 @@ class MyController extends Controller
                                 'Dell'=>['Laptop','Pad','Monitor'],
                                 'Toshiba'=>['Laptop','Monitor','Pc']],
                    'buah'=>['Mangga'=>['lokal','campur','import'],'Jeruk'=>['bangkok','lokal','sopak'],'Apel'=>['tokyo','indo','malang'] ]];
-        $anyar=$campur[$pilih];
-        $baru=$anyar[$jenis];
-         return view('all',compact('baru','pilih','jenis','anyar'));
+
+        $baru=$campur[$pilih];
+        $baru=$baru[$jenis];
+         return view('all',compact('baru','pilih','jenis','baru'));
          
 
     }

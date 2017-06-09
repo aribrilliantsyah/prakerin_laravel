@@ -54,10 +54,5 @@ Route::get('/test7','MyController@percobaan7');
 
 Route::get('/{pilih}','MyController@param1');
 
-Route::get('/{pilih}/{jenis}','MyController@param');
-
-Route::get('posts/{post}/{comment}', function ($post, $comment) {
-    return $post.$comment;
-
-});
+Route::get('/{pilih?}/{jenis?}','MyController@param');
 
