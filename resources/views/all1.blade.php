@@ -4,8 +4,7 @@
 	<title>Pilihan</title>
 </head>
 <body>
-
-Daftar : <b>{{$jenis}}</b> 
+Daftar : <b>{{$pilih}}</b> 
    @foreach($baru as $data)
     <li>{{$data}}</li>
    @endforeach

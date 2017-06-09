@@ -4,9 +4,8 @@
 	<title>Pilihan</title>
 </head>
 <body>
-
 Daftar : <b>{{$jenis}}</b> 
-   @foreach($baru as $data)
+   @foreach($anyar as $data)
     <li>{{$data}}</li>
    @endforeach
 

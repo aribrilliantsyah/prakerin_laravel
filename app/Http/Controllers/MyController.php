@@ -51,16 +51,41 @@ class MyController extends Controller
         $buah = ['Mangga','Jeruk','Apel','Anggur','Melon','Manggis'];
         return view('latihan.all',compact('binatang','buah','komputer'));
     }
-
-    public function param($pilih)
+    
+    //percobaan pilih menu
+    public function param1($pilih)
     {
-        $campur = ['binatang'=>['Sapi','Monyet','Ikan Tuna','Belalang','Burung Kakatua'],
-                   'komputer'=>['Asus','Dell','Toshiba','Samsung','Acer','Axioo','Hp'],
-                   'buah'=>['Mangga','Jeruk','Appel','Anggur','Melon','Manggis']];
+        $campur = ['binatang'=>['kucing','burung','ikan'],
+                   'komputer'=>['Asus','Dell','Toshiba'],
+                   'buah'=>['Mangga','Jeruk','Appel']];
+
+       
         $baru=$campur[$pilih];
-         return view('all',compact('baru','pilih'));
+        
+         return view('all1',compact('baru','pilih'));
+         
 
     }
 
+    public function param($pilih,$jenis)
+    {
+        
+        $campur = ['binatang'=>['kucing'=>['Persia','Garong','Anggora'],
+                                'burung'=>['piit','japati','puyuh'],
+                                'ikan'=>['Sepat','Tuna','Hiu']],
+                   'komputer'=>['Asus'=>['Laptop','pc','smartphone'],
+                                'Dell'=>['Laptop','Pad','Monitor'],
+                                'Toshiba'=>['Laptop','Monitor','Pc']],
+                   'buah'=>['Mangga'=>['lokal','campur','import'],'Jeruk'=>['bangkok','lokal','sopak'],'Apel'=>['tokyo','indo','malang'] ]];
+        $anyar=$campur[$pilih];
+        $baru=$anyar[$jenis];
+         return view('all',compact('baru','pilih','jenis','anyar'));
+         
+
+    }
+  
+
+
+    
      
 }
