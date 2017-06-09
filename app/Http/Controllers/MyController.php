@@ -52,16 +52,15 @@ class MyController extends Controller
         return view('latihan.all',compact('binatang','buah','komputer'));
     }
 
-    public function param($id)
+    public function param($pilih)
     {
-        @if($id=='binatang')
-        $binatang = ['Sapi','Monyet','Ikan Tuna','Belalang','Burung Kakatua'];
-        @else
-        @endif
-        $komputer = ['Asus','Dell','Toshiba','Samsung','Acer','Axioo','Hp'];
-        $buah = ['Mangga','Jeruk','Apel','Anggur','Melon','Manggis'];
-        return view('latihan.all',compact('binatang','buah','komputer'));
-         return view('latihan.all', ['all' => all::findOrFail($id)]);
+        $campur = ['binatang'=>['Sapi','Monyet','Ikan Tuna','Belalang','Burung Kakatua'],
+                   'komputer'=>['Asus','Dell','Toshiba','Samsung','Acer','Axioo','Hp'],
+                   'buah'=>['Mangga','Jeruk','Appel','Anggur','Melon','Manggis']];
+        $baru=$campur[$pilih];
+         return view('all',compact('baru','pilih'));
 
     }
+
+     
 }
