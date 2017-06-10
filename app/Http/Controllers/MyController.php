@@ -67,7 +67,7 @@ class MyController extends Controller
 
     }
 
-    public function param($pilih,$jenis)
+    public function param($pilih,$jenis=null)
     {
         $campur = ['binatang'=>['kucing'=>['Persia','Garong','Anggora'],
                                 'burung'=>['piit','japati','puyuh'],
@@ -76,9 +76,12 @@ class MyController extends Controller
                                 'Dell'=>['Laptop','Pad','Monitor'],
                                 'Toshiba'=>['Laptop','Monitor','Pc']],
                    'buah'=>['Mangga'=>['lokal','campur','import'],'Jeruk'=>['bangkok','lokal','sopak'],'Apel'=>['tokyo','indo','malang'] ]];
-
+        if ($pilih){
         $baru=$campur[$pilih];
+                   }
+        elseif{
         $baru=$baru[$jenis];
+    }
          return view('all',compact('baru','pilih','jenis','baru'));
          
 
