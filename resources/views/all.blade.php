@@ -5,7 +5,7 @@
 </head>
 <body>
 
-Daftar : <b>{{$jenis}}</b> 
+Daftar : <b>{{$pilih}} {{$jenis}}</b> 
    @foreach($baru as $data)
     <li>{{$data}}</li>
    @endforeach

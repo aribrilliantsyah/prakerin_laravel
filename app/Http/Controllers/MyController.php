@@ -77,12 +77,12 @@ class MyController extends Controller
                                 'Toshiba'=>['Laptop','Monitor','Pc']],
                    'buah'=>['Mangga'=>['lokal','campur','import'],'Jeruk'=>['bangkok','lokal','sopak'],'Apel'=>['tokyo','indo','malang'] ]];
         if ($pilih){
-        $baru=$campur[$pilih];
+        $baru=(array_keys($campur[$pilih]));
                    }
-        elseif{
-        $baru=$baru[$jenis];
-    }
-         return view('all',compact('baru','pilih','jenis','baru'));
+        if ($jenis){
+        $baru=($campur[$pilih][$jenis]);
+                   }
+         return view('all',compact('baru','pilih','jenis'));
          
 
     }
