@@ -14,4 +14,10 @@ class SiswaController extends Controller
     	$a = Siswa::all();
     	return view('siswa',compact('a'));
     }
+    public function Percobaan2($id)
+    {
+    	$a = Siswa::find($id);
+    	return view('cek',compact('a'));
+    }
+    
 }

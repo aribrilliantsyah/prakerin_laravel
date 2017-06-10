@@ -54,8 +54,12 @@ Route::get('/test7','MyController@percobaan7');
 
 Route::get('/coba','SiswaController@Percobaan');
 
+Route::get('/coba/{id}','SiswaController@Percobaan2');
+
 
 Route::get('/{pilih?}/{jenis?}','MyController@param');
+
+
 
 
 
