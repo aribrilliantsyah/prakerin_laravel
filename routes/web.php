@@ -52,7 +52,10 @@ Route::get('/test6','MyController@percobaan6');
 
 Route::get('/test7','MyController@percobaan7');
 
+Route::get('/coba','SiswaController@Percobaan');
 
 
 Route::get('/{pilih?}/{jenis?}','MyController@param');
+
+
 
