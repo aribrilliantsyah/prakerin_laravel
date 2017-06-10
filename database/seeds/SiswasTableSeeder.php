@@ -12,6 +12,7 @@ class SiswasTableSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('siswas')->delete();
         $a=[["nama"=>"Fallah Sa'epudin","alamat"=>"Cilisung","jk"=>"Laki-laki"],
              ["nama"=>"Ari Ardiansyah","alamat"=>"Kp ranca","jk"=>"Laki-laki"],
              ["nama"=>"Ade Temi","alamat"=>"Tdk di ketahui","jk"=>"Laki-laki"],
